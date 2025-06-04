@@ -1,5 +1,6 @@
 import { NavLink,Link } from "react-router"
 import HomeButton from "../components/HomeButton"
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
 
@@ -16,14 +17,17 @@ export default function Home() {
             </section>
 
             <section className="home__buttons">
+                <Link to="/signup" >
                 <HomeButton
                     text="Sign Up"
                     style="btn btn__signin"
                 />
+                </Link>
 
                 <Link to="/login" >
                     <HomeButton
                         text="Login"
+                        icon={<FaArrowRight />}
                         style="btn btn__login"
                     />
                 </Link>

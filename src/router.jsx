@@ -5,6 +5,8 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import RequiredAuth from "./components/RequiredAuth"; //this is a custom component to protect routes that require authentication
 import Secrets from "./pages/Secrets";
+import SignUp from "./pages/SingUp";
+import Success from "./pages/Success";
 
 const router = createBrowserRouter([
     {
@@ -18,6 +20,9 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login/>
+            },{
+                 path: "/signup",
+                element: <SignUp/>
             },
             {
                 path: "/secrets",
@@ -26,6 +31,10 @@ const router = createBrowserRouter([
                         <Secrets/>
                     </RequiredAuth>
                 )  
+            },
+            {
+                path:'/success',
+                element: <Success/>
             },
             {
                path: "*",

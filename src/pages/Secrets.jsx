@@ -12,13 +12,13 @@ export default function Secrets() {
 
     useEffect(() => {
         async function fetchSecrets() {
-            try {
+            
                 const response = await fetch('http://localhost:4000/secrets', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Bearer ${token}`
                     }
-                });
+                })
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch secrets');
@@ -26,9 +26,7 @@ export default function Secrets() {
 
                 const data = await response.json();
                 setSecrets(data);
-                } catch (err) {
-                setError(err.message);
-                 }
+               
         }
 
         fetchSecrets();
@@ -52,7 +50,7 @@ export default function Secrets() {
                 {secrets.map(secret => (
                     <li key={secret.id}>
                         <p>"{secret.quote}"</p>
-                        <small>  - {secret.author} ({secret.origin})</small>
+                        <small className="author">  - {secret.author} ({secret.origin})</small>
                     </li>
                 ))}
             </ul>

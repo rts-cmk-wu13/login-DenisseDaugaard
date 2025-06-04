@@ -51,7 +51,9 @@ const from = location.state?.from?.pathname || '/secrets';
     return (
         <>
         <div className="login__header">
-            <button className="btn_goback btn__signin"><FaArrowLeft /></button>
+             <Link to="/" className="goback__container" >
+                <button className="btn_goback btn__signin"><FaArrowLeft /></button>
+            </Link>
             <h2 className="login__title">Login </h2>
             <img className="small__logo" src="/img/emojione_bird.svg" alt="LOGO" />
         </div> 
