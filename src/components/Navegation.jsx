@@ -6,9 +6,9 @@ export default function Navegation() {
     return (
         <>
 
-        <nav>
+        <nav className="nav__links">
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/list">Statements</NavLink>
+            <NavLink to="/statements">Statements</NavLink>
             <NavLink to="/secrets">Secrets</NavLink>
         </nav>
         </>

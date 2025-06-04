@@ -7,6 +7,7 @@ import RequiredAuth from "./components/RequiredAuth"; //this is a custom compone
 import Secrets from "./pages/Secrets";
 import SignUp from "./pages/SingUp";
 import Success from "./pages/Success";
+import Statements from "./pages/Statements";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path:'/success',
                 element: <Success/>
+            },
+            {
+                path:'/statements',
+                element: <Statements/>
             },
             {
                path: "*",
