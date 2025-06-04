@@ -1,0 +1,139 @@
+@use '/src/style/variables' as var;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'myFont';
+    src: url('/public/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+html,input, textarea{
+    font-family: 'myFont', sans-serif;
+}
+
+#root{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    height: 100vh;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a.active{
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    h1, h2, h3{
+        color: var.$primary-color;
+    }
+}
+
+
+header, nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ---------home----------------- */
+
+.home>*{
+  margin-block: 5rem;
+}
+
+.home{
+    text-align: center;
+    .home__title{
+      font-size: 3rem;
+    }
+}
+
+.login__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    width: 100%;
+    margin: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; // space between text and icon
+}
+
+.btn__signin{
+    background-color: var.$primary-color;
+    color: white;
+}
+
+.btn__login{
+    background-color: white;
+    color: var.$primary-color;
+    filter: drop-shadow(0px 16px 60px rgba(78, 79, 114, 0.08));
+    box-shadow: 0px 16px 60px rgba(78, 79, 114, 0.08);
+}
+
+.btn_goback{
+    border: none;
+    border-radius: 0.5rem;
+
+    display: flex;
+    align-self: flex-start;
+    padding: 0.5rem;
+}
+
+input{
+   
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none; 
+    border-radius: 2rem;
+    color: #2C2929;
+   
+    filter: drop-shadow(0px 16px 60px rgba(6, 6, 9, 0.08));
+}
+
+/* -----------------secrets ---------------- */
+
+.logout{
+    display: flex;
+    margin-left: auto;
+    width: 10rem;
+}
+
+.secrets__title{
+  text-align: center;
+  margin-block-end: 2rem;
+}
+
+
+.error{
+    color: red;
+   font-size: 0.75rem;
+   font-weight: bold;
+}
+
+
+.form__grup{
+    margin-bottom: 1rem;
+}

@@ -7,9 +7,6 @@ export default function Navegation() {
         <>
 
         <nav>
-            <div className="logo">
-             <img src="/img/emojione_bird.svg" alt="image of a logo" />
-            </div>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/list">List</NavLink>
             <NavLink to="/contact">Contact</NavLink>

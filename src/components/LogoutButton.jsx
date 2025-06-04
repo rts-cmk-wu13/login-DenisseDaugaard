@@ -1,5 +1,5 @@
 import { useAuth } from "../context/AuthContext"
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function LogoutButton() {
 
@@ -12,6 +12,6 @@ export default function LogoutButton() {
     }
 
     return token ?  (
-        <button onClick={handleLogout}>Logout</button>
+        <button className="btn btn__signin" onClick={handleLogout}>Logout</button>
     )   : null
 }

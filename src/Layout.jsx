@@ -1,8 +1,7 @@
 
 import { Outlet } from "react-router"
-import '/src/style/layout.scss'
-import Header from "./components/Header"
-import Navegation from "./components/Navegation"
+import '/src/style/style.scss'
+// import Header from "./components/Header"
 
 
 function Layout() {
@@ -11,15 +10,13 @@ function Layout() {
   return (
     <>
 
-      <Header />
+      {/* <Header /> */}
     
      <main>
       <Outlet />
      </main>
 
-     <footer>
-    <small>Copy Right © 2025  My App</small>
-     </footer>
+   
     </>
   )
 }

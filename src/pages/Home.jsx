@@ -4,26 +4,32 @@ import HomeButton from "../components/HomeButton"
 export default function Home() {
 
     return (
-        <>
+        
+        <article className="home">
 
-        <h1>Home</h1>
-        <div className="home__text">
-            <h1>early bird.</h1>
-            <p>Your local discount mate</p>
-        </div>
+            <section className="home__logo">
+                <img src="/img/emojione_bird.svg" alt="image of a logo" />
+                <div className="home__text">
+                    <h1 className="home__title">early bird.</h1>
+                    <h5>Your local discount mate</h5>
+                </div>
+            </section>
 
-        <div className="home__buttons">
-            <HomeButton
-                text="Sign Up"
-                style="btn btn__signin"
-            />
-            <HomeButton
-                text="Login"
-                style="btn btn__login"
-            />
+            <section className="home__buttons">
+                <HomeButton
+                    text="Sign Up"
+                    style="btn btn__signin"
+                />
 
-        </div>
+                <Link to="/login" >
+                    <HomeButton
+                        text="Login"
+                        style="btn btn__login"
+                    />
+                </Link>
+            </section>
+        </article>
        
-        </>
+        
     )
 }
