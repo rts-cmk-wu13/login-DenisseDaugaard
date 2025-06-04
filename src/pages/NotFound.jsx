@@ -6,7 +6,7 @@ export default function NotFound() {
 <>
         <h1>404</h1>
         <h3>We are sorry! but it seems like you have landed on a unexpected page</h3>
-        <p>check our List   <Link to="/">Home</Link></p>
+        <p> Go back to <Link to="/"  className="home__link">Home Page</Link></p>
         
 </>
     )
