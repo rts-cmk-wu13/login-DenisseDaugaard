@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import { useLocation } from "react-router";
 import LogoutButton from "../components/LogoutButton";
+import GoBackBtn from "../components/GoBackBtn";
 
 export default function Secrets() {
     const [secrets, setSecrets] = useState([]);
@@ -34,12 +35,9 @@ export default function Secrets() {
 
     return  (
         <>
-            <div className="logout">
-                {location.pathname !== '/login' && (
-                    <>
-                        <LogoutButton/> 
-                    </>
-                )}
+            <div className="secundary__header">
+                <GoBackBtn />
+                
             </div>
 
             <h2 className="secrets__title">Secrets</h2>

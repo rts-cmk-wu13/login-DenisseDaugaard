@@ -13,18 +13,23 @@
 
 html,input, textarea{
     font-family: 'myFont', sans-serif;
+   
 }
 
 #root{
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    
     padding: 2rem;
-    justify-content: space-between;
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     height: 100vh;
+   
+
 
     a{
         text-decoration: none;
@@ -38,6 +43,10 @@ html,input, textarea{
 
     h1, h2, h3{
         color: var.$primary-color;
+    }
+
+    li{
+        list-style: none;
     }
 }
 
@@ -71,6 +80,7 @@ header, nav{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-block: 1rem;
 
     .login__title{
         margin-block: 2rem;
@@ -129,17 +139,17 @@ input{
 
 /* -----------------secrets ---------------- */
 
-.logout{
+.secundary__header{
     display: flex;
-   justify-self: flex-end;
-    width: 10rem;
+    justify-content: space-between;
 
-    .btn__logout{
-        border: none;
-        padding: 0.75rem 1rem;
-        border-radius: 1rem;
-        margin-block-end: 2rem;
-    }
+}
+
+.btn__logout{
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: small;
+    border-radius: 1rem;
 }
 
 .secrets__title{
@@ -160,7 +170,7 @@ li{
 
 
 .error{
-    color: red;
+   color: red;
    font-size: 0.75rem;
    font-weight: bold;
 }

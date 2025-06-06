@@ -37,6 +37,7 @@ export default function Statement() {
              <Link to="/" className="goback__container" >
                 <button className="btn_goback btn__signin"><FaArrowLeft /></button>
             </Link>
+            
         </div> 
 
         <h2>Statements</h2>

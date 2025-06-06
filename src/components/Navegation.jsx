@@ -1,8 +1,11 @@
 import { NavLink } from "react-router"
 
+import LogoutButton from "./LogoutButton"
+
 
 export default function Navegation() {
 
+    
     return (
         <>
 
@@ -10,6 +13,12 @@ export default function Navegation() {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/statements">Statements</NavLink>
             <NavLink to="/secrets">Secrets</NavLink>
+            {location.pathname !== '/login' && (
+                    <>
+                        <LogoutButton/> 
+                    </>
+                )}
+
         </nav>
         </>
     )
